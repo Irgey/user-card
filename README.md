@@ -5,5 +5,5 @@ Web site with 3 pages:
 2) User page where located user cards from bacend server. You can:
 - follow or unfollow user --> click on card button
 - load more user cards --> click on "Load more" button
-- go to Home Page --> click on 'Home Page" button
+- go to Home Page --> click on 'Back" button
 3) 404 page if you will get to non-exist route. You can go to Home page --> click on 'homepage' link
