@@ -13,7 +13,8 @@ import {
   StyledWrapper,
 } from "./UserCard.styled";
 import { fetchUsers, followUser, unfollowUser } from "../../services/userAPI";
-
+import goItLogo from "../../images/Logo@2x.png";
+import cardLogo from "../../images/cardPic@2x.png";
 export const UserCard = (props) => {
   const { followers, avatar, tweets, following } = props;
   const [followersCount, setFollowersCount] = useState(followers);
@@ -36,8 +37,8 @@ export const UserCard = (props) => {
     <StyledDiv>
       <StyledWrapper>
         {" "}
-        <img src="/src/images/Logo@2x.png" alt="GoIt logo" />
-        <StyledLogo src="/src/images/cardPic@2x.png" alt="Card logo" />
+        <img src={cardLogo} alt="Card logo" width="308px" />
+        <StyledLogo src={goItLogo} alt="goIt logo" width="76px" />
       </StyledWrapper>
       <StyledAvatarContainer>
         <StyledAvatarBorder>
