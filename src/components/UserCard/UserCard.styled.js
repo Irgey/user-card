@@ -1,16 +1,17 @@
 import { styled } from "styled-components";
 
+const backgroundCard = `linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  )`;
 export const StyledDiv = styled.div`
   width: 380px;
   height: 460px;
   padding-top: 28px;
   padding-bottom: 36px;
-  background: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
+  background: ${backgroundCard};
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
 
@@ -21,6 +22,10 @@ export const StyledDiv = styled.div`
   text-transform: uppercase;
 
   color: #ebd8ff;
+  transition: scale 250ms;
+  &:hover {
+    scale: 1.02;
+  }
 `;
 
 export const StyledWrapper = styled.div`
@@ -60,12 +65,7 @@ export const StyledAvatarBorder = styled.div`
 export const StyledAvatar = styled.img`
   width: 62px;
   height: 62px;
-  background: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
+  background: ${backgroundCard};
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -103,4 +103,9 @@ export const StyledButton = styled.button`
   text-transform: uppercase;
 
   color: #373737;
+  transition: scale 250ms;
+  &:hover,
+  &:focus {
+    scale: 1.15;
+  }
 `;

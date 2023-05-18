@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   StyledAvatar,
   StyledAvatarBorder,
@@ -11,8 +12,26 @@ import {
   StyledUserInfoWrapper,
   StyledWrapper,
 } from "./UserCard.styled";
+import { fetchUsers, followUser, unfollowUser } from "../../services/userAPI";
 
-export const UserCard = () => {
+export const UserCard = (props) => {
+  const { followers, avatar, tweets, following } = props;
+  const [followersCount, setFollowersCount] = useState(followers);
+  const [isFollowing, setIsFollowing] = useState(following);
+  const handleFollow = () => {
+    followUser(props).then(() => {
+      setFollowersCount(followersCount + 1);
+      setIsFollowing(true).catch((error) => {
+        alert(error);
+      });
+    });
+  };
+  const handleUnfollow = () => {
+    unfollowUser(props).then(() => {
+      setFollowersCount(followersCount - 1);
+      setIsFollowing(false);
+    });
+  };
   return (
     <StyledDiv>
       <StyledWrapper>
@@ -22,16 +41,24 @@ export const UserCard = () => {
       </StyledWrapper>
       <StyledAvatarContainer>
         <StyledAvatarBorder src="/src/images/Hansel.png">
-          <StyledAvatar src="/src/images/Hansel.png" />
+          <StyledAvatar src={avatar} />
         </StyledAvatarBorder>
         <StyledStroke></StyledStroke>
       </StyledAvatarContainer>
       <StyledUserInfoWrapper>
         <StyledUl>
-          <StyledLi>Tweets</StyledLi>
-          <StyledLi>Followers</StyledLi>
+          <StyledLi>{tweets} Tweets</StyledLi>
+          <StyledLi>{followersCount} Followers</StyledLi>
         </StyledUl>
-        <StyledButton>Follow</StyledButton>
+        {isFollowing ? (
+          <StyledButton $following onClick={() => handleUnfollow(props)}>
+            Following
+          </StyledButton>
+        ) : (
+          <StyledButton onClick={() => handleFollow(props)}>
+            Follow
+          </StyledButton>
+        )}
       </StyledUserInfoWrapper>
     </StyledDiv>
   );
