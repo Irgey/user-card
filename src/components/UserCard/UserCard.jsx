@@ -36,11 +36,11 @@ export const UserCard = (props) => {
     <StyledDiv>
       <StyledWrapper>
         {" "}
-        <img src="/src/images/cardPic.png" alt="Card logo" />
-        <StyledLogo src="/src/images/Logo.png" alt="Card logo" />
+        <img src="./src/images/cardPic.png" alt="GoIt logo" />
+        <StyledLogo src="./src/images/Logo.png" alt="Card logo" />
       </StyledWrapper>
       <StyledAvatarContainer>
-        <StyledAvatarBorder src="/src/images/Hansel.png">
+        <StyledAvatarBorder>
           <StyledAvatar src={avatar} />
         </StyledAvatarBorder>
         <StyledStroke></StyledStroke>
