@@ -35,7 +35,7 @@ export const UsersPage = () => {
           navigate("/");
         }}
       >
-        Home Page
+        Back
       </StyledButton>
       <StyledSection>
         <StyledUl>
