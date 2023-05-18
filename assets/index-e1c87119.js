@@ -146,7 +146,7 @@ Error generating stack: `+i.message+`
   &:focus {
     scale: 1.15;
   }
-`,bg=e=>{const{followers:t,avatar:n,tweets:r,following:o}=e,[i,l]=P.useState(t),[s,u]=P.useState(o),a=()=>{$0(e).then(()=>{l(i+1),u(!0).catch(p=>{alert(p)})})},f=()=>{D0(e).then(()=>{l(i-1),u(!1)})};return I.jsxs(Vg,{children:[I.jsxs(Qg,{children:[" ",I.jsx("img",{src:"./src/images/cardPic.png",alt:"GoIt logo"}),I.jsx(Gg,{src:"./src/images/Logo.png",alt:"Card logo"})]}),I.jsxs(Yg,{children:[I.jsx(Jg,{children:I.jsx(Xg,{src:n})}),I.jsx(Kg,{})]}),I.jsxs(qg,{children:[I.jsxs(Zg,{children:[I.jsxs(Tc,{children:[r," Tweets"]}),I.jsxs(Tc,{children:[i," Followers"]})]}),s?I.jsx(Qr,{$following:!0,onClick:()=>f(),children:"Following"}):I.jsx(Qr,{onClick:()=>a(),children:"Follow"})]})]})};/**
+`,bg=e=>{const{followers:t,avatar:n,tweets:r,following:o}=e,[i,l]=P.useState(t),[s,u]=P.useState(o),a=()=>{$0(e).then(()=>{l(i+1),u(!0).catch(p=>{alert(p)})})},f=()=>{D0(e).then(()=>{l(i-1),u(!1)})};return I.jsxs(Vg,{children:[I.jsxs(Qg,{children:[" ",I.jsx("img",{src:"../../images/Logo@2x.png",alt:"GoIt logo"}),I.jsx(Gg,{src:"../../images/cardPic@2x.png",alt:"Card logo"})]}),I.jsxs(Yg,{children:[I.jsx(Jg,{children:I.jsx(Xg,{src:n})}),I.jsx(Kg,{})]}),I.jsxs(qg,{children:[I.jsxs(Zg,{children:[I.jsxs(Tc,{children:[r," Tweets"]}),I.jsxs(Tc,{children:[i," Followers"]})]}),s?I.jsx(Qr,{$following:!0,onClick:()=>f(),children:"Following"}):I.jsx(Qr,{onClick:()=>a(),children:"Follow"})]})]})};/**
  * @remix-run/router v1.6.2
  *
  * Copyright (c) Remix Software Inc.
